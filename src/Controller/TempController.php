@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class TempController extends AbstractController
 {
-    #[Route('/temp/xdebug-info')]
+    #[Route('/temp/xdebug-info', methods: ['GET'])]
     public function xdebugInfo(): Response
     {
         return $this->render('temp/xdebug-info.php', [
