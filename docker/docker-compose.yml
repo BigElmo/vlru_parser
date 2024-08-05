@@ -11,6 +11,8 @@ services:
         - PGID=${PGID}
     volumes:
       - ./../:/var/www/
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
   nginx:
     container_name: nginx
